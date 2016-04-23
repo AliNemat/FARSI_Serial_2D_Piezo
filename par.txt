@@ -1,0 +1,70 @@
+
+
+gx=0.d0
+Lx=10/250.0 !15*landa 
+Ly=2.5/250.0 !1.2
+leg=0 !0.2
+ubar=0.0 ; vbar=0 
+omegaz=0
+
+
+
+yfree=0.9 !2.0d0 !1.0
+xgage=floatx-0.5*landa
+px(1,1)=floatx-0.5*len*sin(0*pi/180)                  ; py(1,1)=towerb+len-0.5*len*( 1-cos(0*pi/180) )  
+  
+px(2,2)=floatx+0.5*len*sin(0*pi/180)                  ; py(2,2)=towerb+0.5*len*( 1-cos(0*pi/180) )                     
+px(3,3)=floatx+percent*len*sin(0*pi/180)              ; py(3,3)=towerb+percent*len*cos(0*pi/180)  
+       
+
+      
+
+beta=1.2
+pdif=0.01
+
+
+
+roair=1.0d0 !1.0d0
+rodrop=1000.0d0
+
+
+ 
+miudrop=0.001   !  !/250.0 !1000*1.0E-6  
+miuair=roair*1.0E-6
+
+
+!!tether coordinates !!
+
+
+
+px(1,4)=floatx+r2+leg;              py(1,4)=towerb 
+px(2,4)=floatx-r2-leg;              py(2,4)=towerb   
+
+
+Ox(1)=floatx+r2+leg;               Oy(1)=0        
+Ox(2)=floatx-r2-leg;               Oy(2)=0          
+          
+
+
+hait=yfree
+HH=0.03  !0.07 !0.015 ! !0.08
+period=landa/(  sqrt(-gy*hait)*sqrt( tanh(2*pi/landa)/(2*pi/landa*hait) )   )
+
+!! do not forget gap and eps !!
+
+!tolen=1.5
+
+
+anac=0 
+acgx=0 ; acgy=0 
+ibdy=3
+
+dt=1E-5 !0.01/(250.0) !0.0005  !0.01 0.002
+
+tstep=50000 !int(20.0*period/dt)
+
+plot=500 !100
+
+ks=0
+
+

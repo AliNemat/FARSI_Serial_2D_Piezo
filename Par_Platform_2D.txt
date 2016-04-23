@@ -1,0 +1,11 @@
+    Towerb=Froude*(0.5*ly-r2) 
+    len=Froude*0.4 !45 ! 25  !87.5 !33  !!22 
+
+    percent=0 !0.0 !0.36 !0.4174  !2.0/11.0 
+    r2=0.2/250
+    floatx=1.0/4.0*lx !3.787*landa !1.0*landa 
+    
+    rosolid=1000  
+    rocon=0 
+    miusolid=1  !/250.0  !rosolid*1.0E-6       !700*10**(-2) !1.0   !5.0  ! 10.0
+    miucon=(rocon)*1.0E-6
